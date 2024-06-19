@@ -1,1 +1,139 @@
-# gencat
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Acceso - Universidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Canal de Acceso - Universidad</h1>
+    </header>
+    <nav>
+        <a href="#admisiones">Admisiones</a>
+        <a href="#requisitos">Requisitos</a>
+        <a href="#fechas">Fechas Importantes</a>
+        <a href="#preinscripcion">Preinscripción</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <div id="admisiones" class="section">
+            <h2>Admisiones</h2>
+            <p>Información sobre el proceso de admisión, formularios y plazos.</p>
+        </div>
+        <div id="requisitos" class="section">
+            <h2>Requisitos</h2>
+            <p>Detalles sobre los requisitos necesarios para aplicar a la universidad.</p>
+        </div>
+        <div id="fechas" class="section">
+            <h2>Fechas Importantes</h2>
+            <p>Calendario de eventos importantes y fechas límite.</p>
+        </div>
+        <div id="preinscripcion" class="section">
+            <h2>Preinscripción</h2>
+            <form action="/submit-preinscripcion" method="post">
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div>
+                    <label for="programa">Programa de estudio:</label>
+                    <select id="programa" name="programa" required>
+                        <option value="ingenieria">Ingeniería</option>
+                        <option value="derecho">Derecho</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="arquitectura">Arquitectura</option>
+                        <option value="economia">Economía</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="documentos">Subir documentos (PDF):</label>
+                    <input type="file" id="documentos" name="documentos" accept=".pdf" required>
+                </div>
+                <div>
+                    <button type="submit">Enviar preinscripción</button>
+                </div>
+            </form>
+        </div>
+        <div id="contacto" class="section">
+            <h2>Contacto</h2>
+            <p>Puedes contactarnos en <a href="mailto:admisiones@universidad.com">admisiones@universidad.com</a> o llamarnos al 123-456-7890.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Universidad. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
